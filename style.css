@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Mono', monospace;
+    /* removed bg-color from container */
+    background-color: hsl(185, 41%, 84%);
+}
+
+.container,
+.content,
+.buttons,
+.content_amount,
+.content_footer,
+.content_footer div,
+.content_icon {
+    display: flex;
+}
+
+.container,
+.content,
+.content_footer {
+    flex-direction: column;
+}
+
+.container {
+    height: fit-content;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* .container div {
+    border: solid black;
+} */
+
+.header {
+    margin-top: 5%;
+    letter-spacing: .7rem;
+    font-weight: 800;
+    color: hsl(186, 13%, 31%);
+}
+
+.content {
+    margin-top: 2rem;
+    width: inherit;
+    /* changed from 100vh to fit-content */
+    height: fit-content;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    background-color: hsl(0, 0%, 100%);
+    align-items: center;
+    justify-content: space-around;
+}
+
+.content_bill {
+    margin-top: 5%;
+    width: 80vw;
+    color: hsl(186, 14%, 43%);
+}
+
+.content_amount {
+    width: 76vw;
+    justify-content: space-between;
+    padding: .5rem;
+    background-color: hsl(185, 41%, 84%);
+    border-radius: 10px;
+}
+
+.text {
+    width: 80vw;
+    margin: 5% 0;
+    color: hsl(186, 14%, 43%);
+}
+
+#dollar {
+    color: hsl(186, 14%, 43%);
+}
+
+.content_number {
+    font-weight: 700;
+    color: hsl(183, 100%, 15%)
+}
+
+.buttons {
+    height: 30vh;
+    width: 80vw;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+button {
+    width: 30vw;
+    height: 6vh;
+    margin: .3rem 0;
+    background-color: hsl(183, 100%, 15%);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-weight: 800;
+}
+
+#custom {
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(186, 14%, 43%);
+}
+
+button:hover {
+    background-color: hsl(152, 49%, 55%);
+}
+
+.content_footer {
+    width: 80vw;
+    height: 40vh;
+    margin: 5% 0;
+    border-radius: 10px;
+    align-items: center;
+    background-color: hsl(183, 100%, 15%);
+}
+
+.content_footer div {
+    width: 80vw;
+    justify-content: space-between;
+}
+
+.content_footer div span {
+    margin: .5rem;
+}
+
+.content_footer button {
+    width: 60vw;
+    background-color: hsl(152, 49%, 55%);
+    border: none;
+    border-radius: 5px;
+    margin: 1rem 0;
+    color: hsl(183, 100%, 15%);
+}
+
+.content_footer--amount {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.footer_text {
+    color: hsl(152, 49%, 55%)
+}
+
+.content_footer--text {
+    color: white;
+}
+
+.content_icon {
+    width: 80vw;
+    padding: .5rem;
+    justify-content: space-between;
+    background-color: hsl(185, 41%, 84%);
+    border-radius: 10px;
+}
+
+@media screen and (min-width: 1440px) {
+    .header {
+        font-size: 35px;
+    }
+    .content {
+        display: flex;
+        flex-direction: row;
+        border-radius: 15px;
+        width: 80%;
+    }
+    .content>div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .content>div:first-child {
+        width: 50%;
+    }
+    .content_footer,
+    .content_footer div {
+        width: 35vw;
+    }
+    .content_amount,
+    .content_icon,
+    .content_bill,
+    .text {
+        width: 36vw;
+        font-size: 20px;
+    }
+    .content_amount,
+    .content_icon {
+        font-size: 25px;
+    }
+    .content_footer--amount {
+        font-weight: 900;
+        font-size: 50px;
+    }
+    .content_footer button {
+        width: 30vw;
+    }
+    .content_footer div {
+        width: 28vw;
+        margin: 1rem 0;
+    }
+    .content_footer button {
+        width: 27vw;
+        font-size: 24px;
+        margin-top: 5rem;
+    }
+    .footer_text span:first-child {
+        font-size: 21px;
+        font-weight: 500;
+    }
+    .text {
+        margin: 1% 0;
+    }
+    .buttons {
+        width: 35vw;
+        height: 18vh;
+    }
+    .buttons>button {
+        width: 10vw;
+        margin: .2rem 0;
+        font-size: 25px;
+    }
+}
